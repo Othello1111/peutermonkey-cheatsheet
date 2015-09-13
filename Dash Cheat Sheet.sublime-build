@@ -1,0 +1,3 @@
+{
+  "cmd": ["cheatset", "generate", "$file"]
+}

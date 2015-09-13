@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Tampermonkey</title>
+    <link href='style.css' rel='stylesheet'>
+    <link href='//dash_ref/Category/Userscript Headers/1'>
+    <link href='//dash_ref_Userscript Headers/Command/@name/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@namespace/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@version/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@author/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@contributor/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@description/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@homepage/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@icon/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@icon64/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@updateURL/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@downloadURL/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@supportURL/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@include/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@match/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@exclude/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@require/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@resource/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@run-at/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@grant/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@noframes/0'>
+    <link href='//dash_ref_Userscript Headers/Command/unwrap/0'>
+    <link href='//dash_ref_Userscript Headers/Command/@nocompat/0'>
+    <link href='//dash_ref/Category/Application Programming Interface/1'>
+    <link href='//dash_ref_Application Programming Interface/Command/unsafeWindow/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/DOMAttrModified/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/wrappedJSObject/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_addStyle(css)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_deleteValue(name)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_listValues()/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_addValueChangeListener(name, callback)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_removeValueChangeListener(listener_id)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_setValue(name, value)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_getValue(name, defaultValue)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_log(message)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_getResourceText(name)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_getResourceURL(name)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_registerMenuCommand(name, fn, accessKey)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_unregisterMenuCommand(menuCmdId)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_openInTab(url, options)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_xmlhttpRequest(details)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_download(details)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_getTab(cb)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_saveTab(tab)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_getTabs(cb)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_notification(details, ondone)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_setClipboard(data, info)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_installScript(url, callback)/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/GM_info/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/&lt;&gt;&lt;![CDATA[blubber]]&gt;&lt;%2F&gt;/0'>
+    <link href='//dash_ref_Application Programming Interface/Command/for each (var k in arr)/0'>
+  </head>
+  <body>
+    <header>
+      <h1>Tampermonkey</h1>
+    </header>
+    <article>
+      <p><p><a href="http://tampermonkey.net/documentation.php">Tampermonkey userscript headers and API</a>.</p></p>
+      <section class='category'>
+        <h2 id='//dash_ref/Category/Userscript Headers/1'>
+          Userscript Headers
+        </h2>
+        <div class='scrollable'>
+          <table>
+            <tr id='//dash_ref_Userscript Headers/Command/@name/0'>
+              <td class='command'>
+                <p>
+                  <code>@name</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>The name of the script.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@namespace/0'>
+              <td class='command'>
+                <p>
+                  <code>@namespace</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>The namespace of the script.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@version/0'>
+              <td class='command'>
+                <p>
+                  <code>@version</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>The script version. This is used for the update check, in case the script is not installed from userscript.org or Tampermonkey has problems to retrieve the scripts meta data.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@author/0'>
+              <td class='command'>
+                <p>
+                  <code>@author</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>The script&#39;s author.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@contributor/0'>
+              <td class='command'>
+                <p>
+                  <code>@contributor</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>One ore more contributors. Multiple tag instances are allowed.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@description/0'>
+              <td class='command'>
+                <p>
+                  <code>@description</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>A short significant description.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@homepage/0'>
+              <td class='command'>
+                <p>
+                  <code>@homepage</code>
+                </p>
+                <p>
+                  <code>@homepageURL</code>
+                </p>
+                <p>
+                  <code>@website</code>
+                </p>
+                <p>
+                  <code>@source</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>The authors homepage that is used at the options page to link from the scripts name to the given page. Please note that if the <code>@namespace</code> tag starts with <code>http://</code> its content will be used for this too.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@icon/0'>
+              <td class='command'>
+                <p>
+                  <code>@icon</code>
+                </p>
+                <p>
+                  <code>@iconURL</code>
+                </p>
+                <p>
+                  <code>@defaulticon</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>The sript icon in low res.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@icon64/0'>
+              <td class='command'>
+                <p>
+                  <code>@icon64</code>
+                </p>
+                <p>
+                  <code>@icon64URL</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>This scripts icon in 64x64 pixels. If this tag, but <code>@icon</code> is given the <code>@icon</code> image will be scaled at some places at the options page.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@updateURL/0'>
+              <td class='command'>
+                <p>
+                  <code>@updateURL</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p>An update URL for the userscript.
+                        Note: The script must either use the <code>@version</code> tag or the server adds a <code>uso:hash</code> key to the update check data.</p>
+                </div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@downloadURL/0'>
+              <td class='command'>
+                <p>
+                  <code>@downloadURL</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Defines the URL where the script will be downloaded from when an update was detected.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@supportURL/0'>
+              <td class='command'>
+                <p>
+                  <code>@supportURL</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Defines the URL where the user can report issues and get personal support.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@include/0'>
+              <td class='command'>
+                <p>
+                  <code>@include</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p>The pages on that a script should run. Multiple tag instances are allowed.
+                  Please note that <code>@include</code> doesn&#39;t support the URL hash parameter. Please visit this forum thread for more information: <a href="http://forum.tampermonkey.net/viewtopic.php?p=3094#p3094">click</a>.</p>
+                  <pre class="highlight plaintext">// @include http://tampermonkey.net/*&#x000A;// @include http://*&#x000A;// @include https://*&#x000A;// @include *</pre>
+                </div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@match/0'>
+              <td class='command'>
+                <p>
+                  <code>@match</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p>More or less equal to the <code>@include</code> tag. You can get more information <a href="http://code.google.com/chrome/extensions/match_patterns.html">here</a>.</p>
+                  
+                  <p>Note: The <code>&lt;all_urls&gt;</code> statement is not yet supported and the scheme part also accepts <code>http*://</code>.</p>
+                  
+                  <p>Multiple tag instances are allowed.</p>
+                </div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@exclude/0'>
+              <td class='command'>
+                <p>
+                  <code>@exclude</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p>Exclude URLs even it they are included by <code>@include</code> or <code>@match</code>.</p>
+                  
+                  <p>Multiple tag instances are allowed.</p>
+                </div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@require/0'>
+              <td class='command'>
+                <p>
+                  <code>@require</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p>Points to a JavaScript file that is loaded and executed before the script itself starts running.</p>
+                  
+                  <p>Multiple tag instances are allowed.</p>
+                </div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@resource/0'>
+              <td class='command'>
+                <p>
+                  <code>@resource</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p>Preloads resource that can by accessed by <code>GM_getResourceURL</code> and <code>GM_getResourceText</code> by the script.</p>
+                  <pre class="highlight plaintext">// @resource icon1 http://tampermonkey.net/favicon.ico&#x000A;// @resource icon2 /images/icon.png&#x000A;// @resource html http://tampermonkey.net/index.html&#x000A;// @resource xml http://tampermonkey.net/crx/tampermonkey.xml</pre>
+                  
+                  <p>Multiple tag instances are allowed.</p>
+                </div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@run-at/0'>
+              <td class='command'>
+                <p>
+                  <code>@run-at</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p>Defines the moment the script is injected. In opposition to other script handlers, <code>@run-at</code> defines the first possible moment a script wants to run. This means it may happen, that a script that uses the <code>@require</code> tag may be executed after the document is already loaded, cause fetching the required script took that long. Anyhow, all <code>DOMNodeInserted</code> and <code>DOMContentLoaded</code> events that happended after the given injection moment are cached and delivered to the script when it is injected.</p>
+                  
+                  <ul>
+                  <li><p><code>// @run-at document-start</code> <br/>
+                  The script will be injected as fast as possible.</p></li>
+                  <li><p><code>// @run-at document-body</code> <br/>
+                  The script will be injected if the body element exists.</p></li>
+                  <li><p><code>// @run-at document-end</code> <br/>
+                  The script will be injected when or after the DOMContentLoaded event was dispatched.</p></li>
+                  <li><p><code>// @run-at document-idle</code> <br/>
+                  The script will be injected after the DOMContentLoaded event was dispatched.</p></li>
+                  <li><p><code>// @run-at context-menu</code> <br/>
+                  The script will be injected if it is clicked at the browser context menu (desktop Chrome-based browsers only).
+                  Note: All <code>@include</code> and <code>@exclude</code> statements will be ignored if this value is used, but this may change in the future.</p></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@grant/0'>
+              <td class='command'>
+                <p>
+                  <code>@grant</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p><code>@grant</code> is used to whitelist <code>GM_*</code> functions and the <code>unsafeWindow</code> object. If no <code>@grant</code> tag is given Tampermonkey guesses the scripts needs.</p>
+                  <pre class="highlight plaintext">// @grant GM_setValue&#x000A;// @grant GM_getValue&#x000A;// @grant GM_setClipboard&#x000A;// @grant unsafeWindow</pre>
+                  
+                  <p>Note: Multiple instances are allowed.</p>
+                  
+                  <p>If <code>@grant</code> is followed by <code>none</code> the sandbox is disabled and the script will run directly at the page context. In this mode no <code>GM_*</code> function but the <code>GM_info</code> property will be available.</p>
+                  <pre class="highlight plaintext">// @grant none</pre>
+                </div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@noframes/0'>
+              <td class='command'>
+                <p>
+                  <code>@noframes</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>This tag makes the script running on the main pages, but not at iframes.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/unwrap/0'>
+              <td class='command'>
+                <p>
+                  <code>unwrap</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>This tag is ignored because it is not needed at Google Chrome/Chromium.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Userscript Headers/Command/@nocompat/0'>
+              <td class='command'>
+                <p>
+                  <code>@nocompat</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p>At the moment Tampermonkey tries to detect whether a script was written in knowledge of Google Chrome/Chromium by looking for the <code>@match</code> tag, but not every script uses it. That&#39;s why Tampermonkey supports this tag to disable all optimizations that might be necessary to run scripts written for Firefox/Greasemonkey. To keep this tag extensible you can to add the browser name that can be handled by the script.</p>
+                  <pre class="highlight plaintext">// @nocompat Chrome</pre>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <section class='category'>
+        <h2 id='//dash_ref/Category/Application Programming Interface/1'>
+          Application Programming Interface
+        </h2>
+        <div class='scrollable'>
+          <table>
+            <tr id='//dash_ref_Application Programming Interface/Command/unsafeWindow/0'>
+              <td class='command'>
+                <p>
+                  <code>unsafeWindow</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>The <code>unsafeWindow</code> object provides full access to the pages JavaScript functions and variables.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/DOMAttrModified/0'>
+              <td class='command'>
+                <p>
+                  <code>DOMAttrModified</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p>Chrome/Chromium does not have native <code>DOMAttrModified</code> support, but in Tampermonkey statements like</p>
+                  <pre class="highlight plaintext">var foo = document.getElementById('whatever');&#x000A;foo.addEventListener("DOMAttrModified", function (e) {&#x000A;    console.log(e);&#x000A;}), false);</pre>
+                  
+                  <p>are working as usual for any attribute change of <code>foo</code>.</p>
+                  
+                  <p>Event handlers that catch bubbled events like this:</p>
+                  <pre class="highlight plaintext">document.addEventListener("DOMAttrModified", function(e) {&#x000A;    console.log(e);&#x000A;}), false);</pre>
+                  
+                  <p>are working too, but will only be notified of changes of objects that are &quot;registered&quot; for <code>DOMAttrModified like the element</code>foo` is.</p>
+                </div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/wrappedJSObject/0'>
+              <td class='command'>
+                <p>
+                  <code>wrappedJSObject</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Although this is not needed in Chrome/Chromium some scripts need that object to be part of HTML elements to run successfully. That&#39;s why Tampermonkey adds this property to every <code>HTMLElement</code> to return the (never wrapped) element.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_addStyle(css)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_addStyle(css)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Adds the given style to the document.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_deleteValue(name)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_deleteValue(name)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Deletes <code>name</code> from storage.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_listValues()/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_listValues()</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>List all names of the storage.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_addValueChangeListener(name, callback)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_addValueChangeListener(name, callback)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p>Adds a change listener to the storage and returns the listener ID.</p>
+                  
+                  <p><code>callback</code> is a function: <code>function(name, old_value, new_value, remote) {}</code>.</p>
+                  
+                  <p><code>name</code> is the name of the observed variable.</p>
+                  
+                  <p>The <code>remote</code> argument of the callback function shows whether this value was modified from the instance of another tab (<code>true</code>) or within this script instance (<code>false</code>).</p>
+                  
+                  <p>Therefore this functionality can be used by scripts of different browser tabs to communicate with each other.</p>
+                </div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_removeValueChangeListener(listener_id)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_removeValueChangeListener(listener_id)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Removes a change listener by its ID.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_setValue(name, value)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_setValue(name, value)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Set the value of <code>name</code> to the storage.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_getValue(name, defaultValue)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_getValue(name, defaultValue)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Get the value of <code>name</code> from storage.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_log(message)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_log(message)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Log a message to the console.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_getResourceText(name)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_getResourceText(name)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Get the content of a predefined <code>@resource</code> tag at the script header.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_getResourceURL(name)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_getResourceURL(name)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Get the base64 encoded URI of a predefined <code>@resource</code> tag at the script header.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_registerMenuCommand(name, fn, accessKey)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_registerMenuCommand(name, fn, accessKey)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Register a menu to be displayed at the Tampermonkey menu at pages where this script runs and returns a menu command ID.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_unregisterMenuCommand(menuCmdId)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_unregisterMenuCommand(menuCmdId)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Unregister a menu command that was previously registered by <code>GM_registerMenuCommand</code> with the given menu command ID.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_openInTab(url, options)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_openInTab(url, options)</code>
+                </p>
+                <p>
+                  <code>GM_openInTab(url, loadInBackground)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Open a new tab with this url. The options object can have two properties: <code>active</code> decides  whether the new tab should be focused and <code>insert</code> that inserts the new tab after the current one. Otherwise the new tab is just appended. <code>loadInBackground</code> has the opposite meaning of <code>active</code> and was added to achieve Greasemonkey compatibility. The function returns an object with the function <code>close</code>, the listener <code>onclosed</code> and a flag called <code>closed</code>.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_xmlhttpRequest(details)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_xmlhttpRequest(details)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p>Make an <code>xmlhttpRequest</code>. Supports:</p>
+                  
+                  <ul>
+                  <li>cross domain requests</li>
+                  <li>headers (user-agent, referer, ...). (needs build nr. 2656 or greater)</li>
+                  <li>Note: The synchronous flag at the details is not supported</li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_download(details)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_download(details)</code>
+                </p>
+                <p>
+                  <code>GM_download(url, name)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p>Downloads a given URL to the local disk.</p>
+                  
+                  <p><code>details</code> can have the following attributes:</p>
+                  
+                  <ul>
+                  <li> <code>url</code> - the URL from where the data should be downloaded</li>
+                  <li><code>name</code> - the filename - for security reasons the file extension needs to be whitelisted at the Tampermonkey options page</li>
+                  <li><code>headers</code> - see GM_xmlhttpRequest for more details</li>
+                  <li><code>saveAs</code> - boolean value, show a save-As dialog</li>
+                  <li><code>onload</code> - <code>function() {}</code> - callback function that is called when the download has finished</li>
+                  <li><code>onerror</code> - <code>function(download) {}</code> - callback function that is called when there was an error</li>
+                  </ul>
+                  
+                  <p>The <code>download</code> argument of the <code>onerror</code> callback can have the following attributes:</p>
+                  
+                  <ul>
+                  <li><p><code>error</code> - error reason</p>
+                  
+                  <ul>
+                  <li><code>not_enabled</code> - the download feature isn&#39;t enabled by the user</li>
+                  <li><code>not_whitelisted</code> - the requested file extension is not whitelisted</li>
+                  <li><code>not_permitted</code> - the user enabled the download feature, but did not give the downloads permission</li>
+                  <li><code>not_supported</code> - the download feature isn&#39;t supported by the browser/version</li>
+                  <li><code>not_succeeded</code> - the download wasn&#39;t started or failed, the details attribute may provide more information</li>
+                  </ul></li>
+                  <li><p><code>details</code> - detail about that error</p></li>
+                  </ul>
+                  
+                  <p>Depending on the download mode <code>GM_info</code> provides a property called <code>downloadMode</code> that is set to one of the following values: <code>native</code>, <code>disabled</code> or <code>browser</code>.</p>
+                </div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_getTab(cb)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_getTab(cb)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Get a object that is persistent as long as this tab is open.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_saveTab(tab)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_saveTab(tab)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Save the tab object to reopen it after a page unload.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_getTabs(cb)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_getTabs(cb)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Get all tab objects in an array to communicate with other script instances.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_notification(details, ondone)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_notification(details, ondone)</code>
+                </p>
+                <p>
+                  <code>GM_notification(text, title, image, onclick)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p>Shows a HTML5 Desktop notification and/or highlight the current tab.</p>
+                  
+                  <p><code>details</code> can have the following attributes:</p>
+                  
+                  <ul>
+                  <li><code>text</code> - the text of the notification (optional if highlight is set)</li>
+                  <li><code>title</code> - the notificaton title (optional)</li>
+                  <li><code>image</code> - the image (optional)</li>
+                  <li><code>highlight</code> - a boolean flag whether to highlight the tab that sends the notfication (optional)</li>
+                  <li><code>timeout</code> - the time after that the notification will be hidden (optional, 0 = disabled)</li>
+                  <li><code>ondone</code> - called when the notification is closed (no matter if this was triggered by a timeout or a click) or the tab was highlighted (optional)</li>
+                  <li><code>onclick</code> - called in case the user clicks the notification (optional)</li>
+                  </ul>
+                  
+                  <p>All parameters do exactly the same like their corresponding details property pendant.</p>
+                </div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_setClipboard(data, info)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_setClipboard(data, info)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Copies data into the clipboard. The parameter <code>info</code> can be an object like <code>{ type: &#39;text&#39;, mimetype: &#39;text/plain&#39;}</code> or just a string expressing the type (<code>text</code> or <code>html</code>).</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_installScript(url, callback)/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_installScript(url, callback)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Install a userscript to Tampermonkey. The callback gets an object like <code>{ found: true, installed: true }</code> that shows whether the script was found and the user installed it.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/GM_info/0'>
+              <td class='command'>
+                <p>
+                  <code>GM_info</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'>
+                  <p>Get some info about the script and Tampermonkey. The object might look like this:</p>
+                  <pre class="highlight plaintext">  Object+&#x000A;  ---&gt; script: Object+&#x000A;  ------&gt; author: ""&#x000A;  ------&gt;copyright: "2012+, You"&#x000A;  ------&gt;description: "enter something useful"&#x000A;  ------&gt;excludes: Array[0]&#x000A;  ------&gt;homepage: null&#x000A;  ------&gt;icon: null&#x000A;  ------&gt;icon64: null&#x000A;  ------&gt;includes: Array[2]&#x000A;  ------&gt;lastUpdated: 1338465932430&#x000A;  ------&gt;matches: Array[2]&#x000A;  ------&gt;isIncognito: false&#x000A;  ------&gt;downloadMode: 'browser'&#x000A;  ------&gt;name: "Local File Test"&#x000A;  ------&gt;namespace: "http://use.i.E.your.homepage/"&#x000A;  ------&gt;options: Object+&#x000A;  ---------&gt;awarENDChrome: true&#x000A;  ---------&gt;compat_arrayleft: false&#x000A;  ---------&gt;compat_foreach: false&#x000A;  ---------&gt;compat_forvarin: false&#x000A;  ---------&gt;compat_metadata: false&#x000A;  ---------&gt;compat_prototypes: false&#x000A;  ---------&gt;compat_uW_gmonkey: false&#x000A;  ---------&gt;noframes: false&#x000A;  ---------&gt;override: Object+&#x000A;  ------------&gt;excludes: false&#x000A;  ------------&gt;includes: false&#x000A;  ------------&gt;orig_excludes: Array[0]&#x000A;  ------------&gt;orig_includes: Array[2]&#x000A;  ------------&gt;use_excludes: Array[0]&#x000A;  ------------&gt;use_includes: Array[0]&#x000A;  ---------&gt;run_at: "document-end"&#x000A;  ------&gt;position: 1&#x000A;  ------&gt;resources: Array[0]&#x000A;  ------&gt;run-at: "document-end"&#x000A;  ------&gt;system: false&#x000A;  ------&gt;unwrap: false&#x000A;  ------&gt;version: "0.1"&#x000A;  ---&gt; scriptMetaStr: undefined&#x000A;  ---&gt; scriptSource: "// ==UserScript==\n// @name       Local File Test\n ...."&#x000A;  ---&gt; scriptUpdateURL: undefined&#x000A;  ---&gt; scriptWillUpdate: false&#x000A;  ---&gt; scriptHandler: "Tampermonkey"&#x000A;  ---&gt; version: "2.4.2716"</pre>
+                </div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/&lt;&gt;&lt;![CDATA[blubber]]&gt;&lt;%2F&gt;/0'>
+              <td class='command'>
+                <p>
+                  <code>&lt;&gt;&lt;![CDATA[blubber]]&gt;&lt;/&gt;</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Tampermonkey supports this way of storing meta data. Tampermonkey tries to automatically detect whether a script needs this option to be enabled.</p></div>
+              </td>
+            </tr>
+            <tr id='//dash_ref_Application Programming Interface/Command/for each (var k in arr)/0'>
+              <td class='command'>
+                <p>
+                  <code>for each (var k in arr)</code>
+                </p>
+              </td>
+              <td class='description'>
+                <div class='name'></div>
+                <div class='notes'><p>Tampermonkey replaces <code>for each</code> statements by chrome compatible code. Tampermonkey tries to automatically detect whether a script needs this option to be enabled.</p></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <section class='notes'>
+        <h2>Notes</h2>
+        <p>Not affiliated with Tampermonkey. The documentation source text used in this cheat sheet is <a href="http://tampermonkey.net/documentation.php">© 2010-2015 Jan Biniok</a>.</p>
+      </section>
+    </article>
+    <footer>
+      Generated with <a onclick="window.dash.openExternal_(this.href); return false;" href='https://github.com/Kapeli/cheatset#readme'>cheatset</a>
+    </footer>
+  </body>
+</html>
