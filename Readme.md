@@ -4,6 +4,8 @@ A [Dash](https://kapeli.com/dash) cheat sheet for Tampermonkey.
 
 Includes the userscript headers and JavaScript functions from the [official Tampermonkey documentation](http://tampermonkey.net/documentation.php).
 
+![](screenshot.png)
+
 ## Installation
 
 Open `Tampermonkey.docset` with Dash.
